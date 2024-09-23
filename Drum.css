@@ -1,0 +1,88 @@
+body {
+    background-color: wheat;
+    margin: 0;
+    font-family: "Lobster", cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 30px;
+    text-shadow: 5px 0 #232931;
+    font-size: 4.5rem;
+    color: #4ecca3;
+    text-align: center;
+}
+
+.set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+button.drum {
+    position: relative;
+    margin: 20px;
+    padding: 0;
+    cursor: pointer;
+    border-color: black;
+}
+
+button.drum img {
+    background-color: antiquewhite;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: rgb(228, 85, 85);
+    font-family: "Lobster", cursive;
+    pointer-events: none; /* Allows clicks to go through the text to the button */
+}
+
+button.drum:active img {
+    transform: scale(0.95);
+}
+
+button.drum:active .overlay {
+    color: #4ecca3;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    button.drum img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .overlay {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    button.drum img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .overlay {
+        font-size: 1.2rem;
+    }
+}
